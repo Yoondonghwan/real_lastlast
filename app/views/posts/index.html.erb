@@ -1,0 +1,13 @@
+<h1>게시판</h1>
+<d>
+    <table class="table table-bordered">
+        <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.id %></td>    
+            <td><a href="/posts/show/<%= post.id %>"><%= post.title %></a></td>
+            <td><a href="/posts/edit/<%= post.id %>">[수정하기]</a></td>
+            
+            <%end%>
+        </tr>
+    </table>
+    <a class="btn btn-default" href="/posts/new" role="button">새글작성하기</a>
