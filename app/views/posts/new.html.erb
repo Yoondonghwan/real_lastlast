@@ -1,3 +1,14 @@
+<h1></h1>
+<div class= 'container  w3-teal'>
+
+<% if current_user.nil? %>
+    <%= link_to '!로그인!', new_user_session_path %>
+<% else %>
+    <%= current_user.email %>
+    <%= link_to '　　로그아웃', destroy_user_session_path, method: 'delete' %>
+<% end %>
+</div>
+<h1></h1>
 <div class="container">
 <h1>내용을 작성해주세요.</h1>
 

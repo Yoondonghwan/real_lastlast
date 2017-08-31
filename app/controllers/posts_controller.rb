@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-    def new
+    load_and_authorize_resource
     
+    def new
+
     end
     
     def create
@@ -10,6 +12,7 @@ class PostsController < ApplicationController
         @post.save
     
     redirect_to "/posts/show/#{@post.id}"
+        
     end
     
     def index
